@@ -86,3 +86,6 @@ button {
     user-select: none;
     text-align: center;
 }
+.explanation p {
+    color: white; 
+}
