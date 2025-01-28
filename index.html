@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Moedas</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function abrirCalculadora() {
+            window.open(
+                'calculadora.html',
+                'Conversor de Moedas',
+                'width=400,height=600,resizable=no,scrollbars=no,status=no'
+            );
+        }
+    </script>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="title">Bem-vindo ao Conversor de Moedas</div>
+            <div class="explanation">
+                <p>Essa ferramenta permite que você converta valores em reais (R$) para dólares (USD) com base na cotação do dólar fornecida.</p>
+                <p>Insira a cotação atual do dólar e o valor em reais para realizar a conversão. Após isso, você verá o valor equivalente em dólares.</p>
+                <button onclick="abrirCalculadora()">Abrir Calculadora</button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

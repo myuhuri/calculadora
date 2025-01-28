@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Moedas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="title">Calculadora Real para Dólar</div>
+            <div class="input">
+                <label>Cotação do Dólar (R$):</label>
+                <input type="number" id="cotacao" placeholder="Ex.: 5.90">
+            </div>
+            <div class="input">
+                <label>Valor para converter (R$):</label>
+                <input type="number" id="valorReal" placeholder="Ex.: 100.00">
+            </div>
+            <button id="calcular">Converter</button>
+            <div class="result" id="resultado"></div>
+        </div>
+    </main>
+
+    <script>
+        const calcular = document.getElementById('calcular');
+
+        function converterMoeda() {
+            const cotacao = +document.getElementById('cotacao').value;
+            const valorReal = +document.getElementById('valorReal').value;
+            const resultado = document.getElementById('resultado');
+
+            if (cotacao > 0 && valorReal > 0) {
+                const valorConvertido = (valorReal / cotacao).toFixed(2);
+                resultado.textContent = `R$ ${valorReal} em Dólares é $ ${valorConvertido}.`;
+            } else {
+                resultado.textContent = 'Por favor, preencha todos os campos corretamente!';
+            }
+        }
+
+        calcular.addEventListener('click', converterMoeda);
+    </script>
+</body>
+</html>
